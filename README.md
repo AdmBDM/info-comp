@@ -58,3 +58,8 @@ frontend
 vendor/                  contains dependent 3rd-party packages
 environments/            contains environment-based overrides
 ```
+
+-------------------
+
+**Подключение к хосту по SSH**
+ssh -i $env:USERPROFILE\.ssh\info-comp admbdm@192.168.88.7
