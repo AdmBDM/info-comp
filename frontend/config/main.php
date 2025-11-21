@@ -11,6 +11,7 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
+
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
@@ -18,10 +19,12 @@ return [
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
-            'identityCookie' => ['name' => '_identity-frontend', 'httpOnly' => true],
+            'identityCookie' => [
+                'name' => '_identity-frontend',
+                'httpOnly' => true
+            ],
         ],
         'session' => [
-            // this is the name of the session cookie used for login on the frontend
             'name' => 'advanced-frontend',
         ],
         'log' => [
@@ -36,14 +39,18 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                // API v1
+                'GET api/v1' => 'api/v1/default/index',
+                'GET api/v1/<controller>' => 'api/v1/<controller>/index',
+                'GET api/v1/<controller>/<action>' => 'api/v1/<controller>/<action>',
             ],
         ],
-        */
     ],
+
     'params' => $params,
 ];

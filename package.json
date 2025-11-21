@@ -1,0 +1,22 @@
+{
+  "name": "info-comp",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">     <a href=\"https://github.com/yiisoft\" target=\"_blank\">         <img src=\"https://avatars0.githubusercontent.com/u/993323\" height=\"100px\">     </a>     <h1 align=\"center\">Yii 2 Advanced Project Template</h1>     <br> </p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-frontend-css": "sass frontend/assets/src/scss:frontend/web/dist/css --no-source-map",
+    "build-frontend-js": "npx esbuild frontend/assets/src/js --outdir=frontend/web/dist/js --bundle",
+    "build-backend-css": "sass backend/assets/src/scss:backend/web/dist/css --no-source-map",
+    "build-backend-js": "npx esbuild backend/assets/src/js --outdir=backend/web/dist/js --bundle",
+    "build-all": "npm run build-frontend-css && npm run build-frontend-js && npm run build-backend-css && npm run build-backend-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github-infocomp:AdmBDM/info-comp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
