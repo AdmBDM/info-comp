@@ -45,6 +45,7 @@ return [
             'showScriptName' => false,
             'rules' => [
                 // API v1
+                'GET api/manifest' => 'api/v1/manifest/index',
                 'GET api/v1' => 'api/v1/default/index',
                 'GET api/v1/<controller>' => 'api/v1/<controller>/index',
                 'GET api/v1/<controller>/<action>' => 'api/v1/<controller>/<action>',
