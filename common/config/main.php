@@ -16,4 +16,11 @@ return [
             'controllerNamespace' => 'common\modules\api\controllers',
         ],
     ],
+    'urlManager' => [
+        'enablePrettyUrl' => true,
+        'showScriptName' => false,
+        'rules' => [
+            'GET api/manifest' => 'api/v1/manifest/index',
+        ],
+    ],
 ];
